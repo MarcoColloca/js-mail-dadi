@@ -11,7 +11,7 @@ const pcNumberDOMElement = document.getElementById('pc-number')
 const resultDOMElement = document.getElementById('result')
 
 
-//console.dir(resultDOMElement)
+
 
 
 
@@ -26,7 +26,7 @@ userNumberButtonDOMElement.addEventListener('click', function(){
     userNumberDomElement.innerHTML = 'Tu: ' + UserRandomNumber;
     /// Modifico l'innerHTML dell'elemento del numero del computer in modo che mostri il numero casuale, quando premo sul bottone
     pcNumberDOMElement.innerHTML = 'PC: ' + PcRandomNumber;
-
+    
     
     /// Creo una condizione: SE il numero del giocatore è maggiore del numero del computer
     if(UserRandomNumber > PcRandomNumber){
@@ -37,6 +37,7 @@ userNumberButtonDOMElement.addEventListener('click', function(){
     }else if(UserRandomNumber < PcRandomNumber){
         /// Verrà modificato l'innerHTML del relativo elemento in modo da mostrare il risultato adeguato con le classi adeguate
         resultDOMElement.innerHTML = `<div class="text-red"><h1>Hai Perso, Ritenta!</h1></div>`
+
     /// ALTRIMENTI SE i due numeri sono ugali    
     }else{
         /// Verrà modificato l'innerHTML del relativo elemento in modo da mostrare il risultato adeguato con le classi adeguate
