@@ -5,9 +5,41 @@ body{
 }
 
 
+.container{
+    max-width: 400px;
+    margin: 0 auto;
+}
+
 #number--box{
     color: white;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+
+#user-number{
+    
+    color: rgb(0, 162, 255);
+}
+
+#pc-number{
+    
+    color: rgb(255, 65, 65);
+
+}
+
+.text-red{
+
+    color: rgb(255, 65, 65);
+}
+
+.text-blue{
+
+    color: rgb(0, 162, 255);
+}
+
+.text-purple{
+
+    color: rgb(111, 0, 255);;
 }

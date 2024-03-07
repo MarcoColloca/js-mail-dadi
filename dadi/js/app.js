@@ -4,7 +4,10 @@ console.log('JS Trial')
 const userNumberButtonDOMElement = document.getElementById('user-number-button')
 const userNumberDomElement = document.getElementById('user-number')
 const pcNumberDOMElement = document.getElementById('pc-number')
-const resultDOMElemennt = document.getElementById('result')
+const resultDOMElement = document.getElementById('result')
+
+
+console.dir(resultDOMElement)
 
 //const numbers = [];
 
@@ -17,12 +20,20 @@ userNumberButtonDOMElement.addEventListener('click', function(){
     userNumberDomElement.innerHTML = 'Tu: ' + UserRandomNumber;
     pcNumberDOMElement.innerHTML = 'PC: ' + PcRandomNumber;
 
+    
+
     if(UserRandomNumber > PcRandomNumber){
-        resultDOMElemennt.innerHTML = 'Congratulazioni Hai Vinto!'
-    }else if(UserRandomNumber === PcRandomNumber){
-        resultDOMElemennt.innerHTML = 'Pareggio!'
+        resultDOMElement.innerHTML = `<div class="text-blue"><h1>Hai Vinto!</h1></div>`
+        //'Congratulazioni Hai Vinto!'
+        
+    }else if(UserRandomNumber < PcRandomNumber){
+        
+        resultDOMElement.innerHTML = `<div class="text-red"><h1>Hai Perso, Ritenta!</h1></div>`
+        
     }else{
-        resultDOMElemennt.innerHTML = 'Hai Perso, ritenta!'
+        
+        resultDOMElement.innerHTML = `<div class="text-purple"><h1>Pareggio!</h1></div>`
+        
     }
 })
 
