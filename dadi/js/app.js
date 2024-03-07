@@ -26,26 +26,27 @@ userNumberButtonDOMElement.addEventListener('click', function(){
     userNumberDomElement.innerHTML = 'Tu: ' + UserRandomNumber;
     /// Modifico l'innerHTML dell'elemento del numero del computer in modo che mostri il numero casuale, quando premo sul bottone
     pcNumberDOMElement.innerHTML = 'PC: ' + PcRandomNumber;
-    
+    /// Creo una variabile che contenga il risultato della partita
     let result = " "
     
     /// Creo una condizione: SE il numero del giocatore è maggiore del numero del computer
     if(UserRandomNumber > PcRandomNumber){
-        /// Verrà modificato l'innerHTML del relativo elemento in modo da mostrare il risultato adeguato con le classi adeguate
+        /// Inserisco il contenuto della variabile che corrisponde al risultato della partita nel caso vinca il giocatore
         result = `<div class="text-blue"><h1>Hai Vinto!</h1></div>`
         
     /// ALTRIMENTI SE il numero del giocatore è inferiore rispetto al numero del computer    
     }else if(UserRandomNumber < PcRandomNumber){
-        /// Verrà modificato l'innerHTML del relativo elemento in modo da mostrare il risultato adeguato con le classi adeguate
+        /// Inserisco il contenuto della variabile che corrisponde al risultato della partita nel caso vinca il computer
         result = `<div class="text-red"><h1>Hai Perso, Ritenta!</h1></div>`
 
     /// ALTRIMENTI SE i due numeri sono ugali    
     }else{
-        /// Verrà modificato l'innerHTML del relativo elemento in modo da mostrare il risultato adeguato con le classi adeguate
+        /// Inserisco il contenuto della variabile che corrisponde al risultato della partita nel caso si pareggi
         result = `<div class="text-purple"><h1>Pareggio!</h1></div>`
         
     }
 
+    /// Assegno all'innerHTML dell'elemento relativo al risultato, il risultato ottenuto tramite i numeri generati a caso
     resultDOMElement.innerHTML = result;
 })
 
