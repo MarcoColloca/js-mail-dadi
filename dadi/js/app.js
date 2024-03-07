@@ -27,23 +27,26 @@ userNumberButtonDOMElement.addEventListener('click', function(){
     /// Modifico l'innerHTML dell'elemento del numero del computer in modo che mostri il numero casuale, quando premo sul bottone
     pcNumberDOMElement.innerHTML = 'PC: ' + PcRandomNumber;
     
+    let result = " "
     
     /// Creo una condizione: SE il numero del giocatore è maggiore del numero del computer
     if(UserRandomNumber > PcRandomNumber){
         /// Verrà modificato l'innerHTML del relativo elemento in modo da mostrare il risultato adeguato con le classi adeguate
-        resultDOMElement.innerHTML = `<div class="text-blue"><h1>Hai Vinto!</h1></div>`
+        result = `<div class="text-blue"><h1>Hai Vinto!</h1></div>`
         
     /// ALTRIMENTI SE il numero del giocatore è inferiore rispetto al numero del computer    
     }else if(UserRandomNumber < PcRandomNumber){
         /// Verrà modificato l'innerHTML del relativo elemento in modo da mostrare il risultato adeguato con le classi adeguate
-        resultDOMElement.innerHTML = `<div class="text-red"><h1>Hai Perso, Ritenta!</h1></div>`
+        result = `<div class="text-red"><h1>Hai Perso, Ritenta!</h1></div>`
 
     /// ALTRIMENTI SE i due numeri sono ugali    
     }else{
         /// Verrà modificato l'innerHTML del relativo elemento in modo da mostrare il risultato adeguato con le classi adeguate
-        resultDOMElement.innerHTML = `<div class="text-purple"><h1>Pareggio!</h1></div>`
+        result = `<div class="text-purple"><h1>Pareggio!</h1></div>`
         
     }
+
+    resultDOMElement.innerHTML = result;
 })
 
 
