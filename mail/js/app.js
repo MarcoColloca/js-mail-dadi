@@ -13,6 +13,9 @@ const emailLogInDOMElement = document.getElementById('email-login')
 /// Dichiaro ed assegno una costante per il bottone della validazione della mail.
 const emailLogInButtonDOMElement = document.getElementById('email-login-button')
 
+const emailValidationDOMElement = document.getElementById('email-validation')
+const divElement = document.createElement('div')
+emailValidationDOMElement.appendChild (divElement);
 
 
 
@@ -51,9 +54,11 @@ emailLogInButtonDOMElement.addEventListener('click', function(){
         if(userEmail === registeredEmail){
             areEmailsInArray = true;
             console.log('Presente')
+            divElement.innerHTML = "La Mail è Valida";
         // ALTRIMENTI stamperà Assente
         } else{
             console.log('Assente')
+            divElement.innerHTML = "La Mail Non è Valida";
         }
 
     }
