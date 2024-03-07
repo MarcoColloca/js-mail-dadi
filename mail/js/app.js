@@ -3,7 +3,7 @@ console.log('JS Trial')
 
 /// Dichiaro ed assegno una costante per input della mail di registrazione.
 const emailRegistrationDOMElement = document.getElementById('email-registration')
-costante
+
 /// Dichiaro ed assegno una costante per input del bottone della mail di registrazione.
 const emailRegistrationButtonDOMElement = document.getElementById('email-registration-button')
 
