@@ -13,9 +13,13 @@ const emailLogInDOMElement = document.getElementById('email-login')
 /// Dichiaro ed assegno una costante per il bottone della validazione della mail.
 const emailLogInButtonDOMElement = document.getElementById('email-login-button')
 
+
+/// Creo una Costante che corrponda al div di validazione
 const emailValidationDOMElement = document.getElementById('email-validation')
+/// Creo una Costante che permetta di aggiungere un div ad un elemento nel documento
 const divElement = document.createElement('div')
-emailValidationDOMElement.appendChild (divElement);
+/// Aggiungo un div al div di validaazione
+emailValidationDOMElement.appendChild(divElement);
 
 
 
@@ -50,12 +54,12 @@ emailLogInButtonDOMElement.addEventListener('click', function(){
         // Creo una costante a cui assegno come valore gli elementi all'interno del mio array
         let registeredEmail = emails[i];
 
-        // Creo una condizione per la quale SE il valore della mail inserita dall'utente corrisonde ad uno degli elementi nel mio array, avrò come risultato "true" e mi stamperà Presente
+        // Creo una condizione per la quale SE il valore della mail inserita dall'utente corrisonde ad uno degli elementi nel mio array, avrò come risultato "true" e mi stamperà Presente e fornirà nell'HTML il messaggio di validazione
         if(userEmail === registeredEmail){
             areEmailsInArray = true;
             console.log('Presente')
             divElement.innerHTML = "La Mail è Valida";
-        // ALTRIMENTI stamperà Assente
+        // ALTRIMENTI stamperà Assente e fornirà nell'HTML il messaggio di non validazione
         } else{
             console.log('Assente')
             divElement.innerHTML = "La Mail Non è Valida";
