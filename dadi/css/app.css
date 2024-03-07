@@ -4,6 +4,9 @@ body{
     background-color: rgb(56, 0, 0);
 }
 
+.dice-img{
+    width: 400px;
+}
 
 .container{
     max-width: 400px;
@@ -11,10 +14,12 @@ body{
 }
 
 #number--box{
+    margin-left: 100px;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+   
 }
 
 
