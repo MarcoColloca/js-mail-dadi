@@ -45,21 +45,18 @@ emailLogInButtonDOMElement.addEventListener('click', function(){
         const userEmail = emailLogInDOMElement.value;
         
         // Creo una costante a cui assegno come valore gli elementi all'interno del mio array
-        const registeredEmail = emails[i];
+        let registeredEmail = emails[i];
 
-        // Creo una condizione per la quale SE il valore della mail inserita dall'utente corrisonde ad uno degli elementi nel mio array, avrò come risultato "true"
+        // Creo una condizione per la quale SE il valore della mail inserita dall'utente corrisonde ad uno degli elementi nel mio array, avrò come risultato "true" e mi stamperà Presente
         if(userEmail === registeredEmail){
             areEmailsInArray = true;
+            console.log('Presente')
+        // ALTRIMENTI stamperà Assente
+        } else{
+            console.log('Assente')
         }
 
     }
 
-    // Creo la condizione per la quale SE il risultato del mio eventListener corrisonda a true (quindi se la mail inserita dall'utente, 
-    // corrispodne ad una delle mail registrate), avrò come risultato un console.log con la stringa Presente, ALTRIMENTI avrò come 
-    // risultato un console.log con la stringa Assente
-    if(areEmailsInArray === true){
-        console.log('Presente')
-    }else{
-        console.log('Assente')
-    }
+    
 })
